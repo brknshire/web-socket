@@ -1,0 +1,124 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Arial', sans-serif;
+	background-color: #2f3136;  /* Dark background */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+}
+
+	.chat-container {
+		width: 420px;
+		height: 500px;
+		background-color: #36393f;  /* Darker container */
+		border-radius: 8px;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+		display: flex;
+		flex-direction: column;
+	}
+
+	.chat-header {
+		background-color: #202225;  /* Slightly darker header */
+		color: #ffffff;
+		padding: 12px;
+		border-top-left-radius: 8px;
+		border-top-right-radius: 8px;
+		text-align: center;
+		font-size: 13px;
+	}
+
+	.chat-box {
+		flex-grow: 1;
+		overflow-y: auto;
+		padding: 15px;
+		border-bottom: 1px solid #444748;  /* Thinner border */
+		background-color: #2f3136;  /* Match body background */
+	}
+
+	.messages {
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	.message {
+		background-color: #4f545c;  /* Slightly lighter gray for messages */
+		color: #dcdfe1;  /* Light text color */
+		padding: 8px 12px;
+		border-radius: 5px;
+		max-width: 80%;
+		margin-bottom: 8px;
+		font-size: 16px;
+	}
+
+	.input-section {
+		display: flex;
+		padding: 10px;
+		background-color: #2f3136;
+		border-bottom-left-radius: 8px;
+		border-bottom-right-radius: 8px;
+		justify-content: space-between;
+		align-items: center;
+		border-top: 1px solid #444748;  /* Thinner border */
+	}
+
+	#message-input {
+		width: 75%;
+		padding: 10px;
+		background-color: #202225;  /* Dark background for input */
+		color: #dcdfe1;  /* Light text */
+		border: 1px solid #444748;  /* Thinner border */
+		border-radius: 5px;
+		font-size: 16px;
+		outline: none;
+	}
+
+	#message-input:focus {
+		border-color: #7289da;  /* Discord-like blue on focus */
+	}
+
+	#send-button {
+		padding: 8px 15px;
+		border: none;
+		background-color: #7289da;  /* Discord-like blue */
+		color: white;
+		border-radius: 5px;
+		cursor: pointer;
+		font-size: 16px;
+		margin-left: 10px;
+		transition: background-color 0.3s ease;
+	}
+
+	#send-button:hover {
+		background-color: #5b6e9d;  /* Slightly darker blue on hover */
+	}
+
+	#send-button:active {
+		background-color: #4e5b84;  /* Darker blue on click */
+	}
+
+	/* Optional Responsive Design for Mobile */
+	@media (max-width: 600px) {
+		.chat-container {
+			width: 100%;
+			height: 100%;
+			border-radius: 0;
+		}
+
+		#message-input {
+			width: 65%;
+		}
+
+		#send-button {
+			width: 30%;
+		}
+	}
+
